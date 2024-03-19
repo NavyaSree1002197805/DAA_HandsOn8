@@ -7,14 +7,14 @@ class Stack:
 
     def push(self, item):
         if self.top >= MAX_SIZE - 1:
-            return False  # Stack overflow
+            return False  
         self.top += 1
         self.data[self.top] = item
         return True
 
     def pop(self):
         if self.top < 0:
-            return None, False  # Stack underflow
+            return None, False  
         item = self.data[self.top]
         self.top -= 1
         return item, True
@@ -44,7 +44,7 @@ class Queue:
 
     def dequeue(self):
         if self.front == -1:
-            return None, False  # Queue empty
+            return None, False  
         item = self.data[self.front]
         if self.front == self.rear:
             self.front = self.rear = -1
@@ -79,7 +79,7 @@ class LinkedList:
 
     def insert(self, item):
         if self.next_available is None:
-            return False  # List full
+            return False  
         new_node_index = self.next_available
         self.next_available = self.data[new_node_index]
         self.data[new_node_index] = (item, self.head)
@@ -88,7 +88,7 @@ class LinkedList:
 
     def remove(self):
         if self.head == -1:
-            return None, False  # List empty
+            return None, False 
         item, next_head = self.data[self.head]
         self.data[self.head] = self.next_available
         self.next_available = self.head
@@ -113,10 +113,10 @@ if __name__ == "__main__":
     stack.push(1)
     stack.push(2)
     stack.push(3)
-    print("Pop:", stack.pop())  # Output: 3
-    print("Pop:", stack.pop())  # Output: 2
-    print("Is empty:", stack.is_empty())  # Output: False
-    stack.print_elements()  # Output: Elements in stack: 1
+    print("Pop:", stack.pop())  
+    print("Pop:", stack.pop())  
+    print("Is empty:", stack.is_empty())  
+    stack.print_elements()  
 
     
     print("\nQueue:")
@@ -124,10 +124,10 @@ if __name__ == "__main__":
     queue.enqueue(1)
     queue.enqueue(2)
     queue.enqueue(3)
-    print("Dequeue:", queue.dequeue())  # Output: 1
-    print("Dequeue:", queue.dequeue())  # Output: 2
-    print("Is empty:", queue.is_empty())  # Output: False
-    queue.print_elements()  # Output: Elements in queue: 3
+    print("Dequeue:", queue.dequeue())  
+    print("Dequeue:", queue.dequeue())  
+    print("Is empty:", queue.is_empty())  
+    queue.print_elements()  
 
     
     print("\nSingly Linked List:")
@@ -135,7 +135,7 @@ if __name__ == "__main__":
     linked_list.insert(1)
     linked_list.insert(2)
     linked_list.insert(3)
-    print("Remove:", linked_list.remove())  # Output: 3
-    print("Remove:", linked_list.remove())  # Output: 2
-    print("Is empty:", linked_list.is_empty())  # Output: False
-    linked_list.print_elements()  # Output: Elements in linked list: 1
+    print("Remove:", linked_list.remove())  
+    print("Remove:", linked_list.remove())  
+    print("Is empty:", linked_list.is_empty())  
+    linked_list.print_elements()  
