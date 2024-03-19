@@ -106,7 +106,7 @@ class LinkedList:
             print(item)
             current = next_index
 
-# Sample input/output for stack
+
 if __name__ == "__main__":
     print("Stack:")
     stack = Stack()
@@ -118,7 +118,7 @@ if __name__ == "__main__":
     print("Is empty:", stack.is_empty())  # Output: False
     stack.print_elements()  # Output: Elements in stack: 1
 
-    # Sample input/output for queue
+    
     print("\nQueue:")
     queue = Queue()
     queue.enqueue(1)
@@ -129,7 +129,7 @@ if __name__ == "__main__":
     print("Is empty:", queue.is_empty())  # Output: False
     queue.print_elements()  # Output: Elements in queue: 3
 
-    # Sample input/output for singly linked list
+    
     print("\nSingly Linked List:")
     linked_list = LinkedList()
     linked_list.insert(1)
